@@ -8,12 +8,8 @@ def home():
     title = 'home'
     content = 'home page'
     link = 'Home'
-    data = {
-        'user_name': 'Diyorbek',
-        'age': 20
-    }
 
-    return render_template('index.html', title=title, content=content, link=link, data=data)
+    return render_template('home.html', title=title, content=content, link=link)
 
     
 @app.route('/about')
