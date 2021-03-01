@@ -8,6 +8,12 @@
 
 <body>
     <h1>{{ content }}</h1>
+    <a href="/">{{ link }}</a>
+
+    {% if data.age > 19 %}
+    <p>{{ data.user_name }}</p>
+    {% endif %}
+
 </body>
 
 </html>
