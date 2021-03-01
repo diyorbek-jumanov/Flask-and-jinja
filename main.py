@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from jinja2 import Template
 
 app = Flask(__name__)
@@ -21,13 +21,8 @@ home_page = Template('''
 def home():
     title = 'home'
     content = 'home page'
-    link = '''
-        <a href="/about">ABOUTE</a> <br> <br>
-        <a href="/product">PRODUCT</a> <br> <br>
-        <a href="/help">HELP</a>
-    '''
 
-    return home_page.render(title=title, content=content, link=link)
+    return render_template('index.html', title=title, content=content)
 
     
 @app.route('/about')
